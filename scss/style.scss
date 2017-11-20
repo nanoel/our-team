@@ -1,0 +1,241 @@
+@import "normalize";
+@import "layout";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900);
+
+$primary-color: #ffcc00;
+$body-font: 'Raleway', sans-serif;
+$text-color: #333;
+$header-font: 'Roboto', sans-serif;
+$secondary-color: #cccccc;
+
+
+body{
+	font: 400 14px/1.7 $body-font;
+	color: $text-color;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+a,
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: block;
+	text-decoration: none;
+	border: 1px solid $primary-color;
+	margin: 0 auto;
+	padding: 0 11px;
+	font: 700 14px $header-font;
+	color: #666;
+	height: 24px;
+	line-height: 24px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-team {
+	padding: 110px 0;
+
+	&__suptitle {
+		font: 500 18px/1 $body-font;
+		color: #898f8f;
+		text-align: center;
+		letter-spacing: 0.02em;
+		margin: 0;
+	}
+	&__title {
+		font: 900 60px/1 $header-font;
+		color: $primary-color;
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+		position: relative;
+
+
+		&:after{
+			content: "";
+			display: block;
+			max-width: 450px;
+			margin: 50px auto 0;
+			height: 1px;
+			background: $primary-color;
+		}
+	}
+	&__title-icon {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		fill: $primary-color;
+		transform: translate(-50%, 50%);
+		background: #FFF;
+		box-shadow: 0 0 0 5px #fff;
+	}
+}
+
+.ba-crewman{
+	display: flex;
+	&__image-col{
+		flex-basis: 50%;
+		border-right: 1px solid $primary-color;
+		padding: 76px 80px 76px 68px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__content-col{
+		flex-basis: 50%;
+		padding: 0 68px 0 80px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__name {
+		font:900 36px/1 $header-font;
+		color: #666;
+		position: relative;
+		padding-bottom: 60px;
+		margin: 0;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100px;
+			border: 1px solid #ffcc00;
+			left: 50%;
+			margin-left: -50px;
+			bottom: 35px;
+		}
+	}
+
+	&__position {
+		font: 400 24px/1.2 $body-font;
+		color: #666;
+		margin: 0;
+		padding-bottom: 26px;
+	}
+
+	&__image {
+		padding: 15px;
+		border: 1px solid $primary-color;
+		position: relative;
+
+		&:before, &:after {
+			position: absolute;
+			content: "";
+			background: #FFF;
+			z-index: 0;
+		}
+
+		&:before {
+			left: 25%;
+			right: 25%;
+			top: -2px;
+			bottom: -2px;
+		}
+
+		&:after {
+			top: 25%;
+			bottom: 25%;
+			right: -2px;
+			left: -2px;
+		}
+
+		img {
+			display: block;
+			border: inherit;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__content {
+		font: 500 14px/1.2 $body-font;
+		color: #333;
+		position: relative;
+		margin: 0;
+		padding-bottom: 50px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			background: linear-gradient(to right, #ffcc00 0%, #febf01 15%, #ffffff 15%, #ffffff 25%, #ffcc00 25%, #ffcc00 25%, #ffcc00 75%, #ffcc00 75%, #ffffff 75%, #ffffff 85%, #ffcc00 85%, #ffcc00 100%);
+			width: 50px;
+			height: 4px;
+			transform: translate(-25px, 50%);
+		}
+	}
+}
+
+.ba-socials {
+	position: relative;
+	padding-bottom: 30px;
+
+	a {
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		padding: 10px 4px 0;
+		border: 2px solid $secondary-color;
+		border-radius: 50%;
+
+		&:hover {
+			color: $primary-color;
+			border-color: $primary-color;
+		}
+	}
+
+	svg {
+		fill: $secondary-color;
+		width: 25px;
+		height: 25px;
+
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+}
